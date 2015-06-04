@@ -1,14 +1,34 @@
 <h1>New Recipe</h1>
 
-<%= form_for :recipe do |f| %>
+<%= form_for :recipe, url: recipes_path do |f| %>
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </p>
  
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :prep_time %><br>
+    <%= f.text_field :prep_time %>
+  </p>
+
+  <p>
+    <%= f.label :cooking_time %><br>
+    <%= f.text_field :cook_time %>
+  </p>
+
+  <p>
+    <%= f.label :ingredients %><br>
+    <%= f.text_area :ingredients %>
+  </p>
+
+  <p>
+    <%= f.label :cooking_instructions %><br>
+    <%= f.text_area :cooking_instructions %>
   </p>
  
   <p>

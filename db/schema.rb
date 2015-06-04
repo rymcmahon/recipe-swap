@@ -11,20 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150601185109) do
+ActiveRecord::Schema.define(version: 20150603193825) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "name",                 limit: 255
-    t.string   "ingredients",          limit: 255
-    t.string   "cooking_instructions", limit: 255
+    t.text     "ingredients",          limit: 65535
+    t.text     "cooking_instructions", limit: 65535
     t.string   "description",          limit: 255
     t.string   "picture",              limit: 255
     t.string   "prep_time",            limit: 255
     t.string   "cook_time",            limit: 255
     t.string   "people_served",        limit: 255
     t.string   "comments",             limit: 255
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "users", force: :cascade do |t|
