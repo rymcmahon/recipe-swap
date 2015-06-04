@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
 	def show
 		@recipe = Recipe.find(params[:id])
 		@ingredients_array = Recipe.find(params[:id]).ingredients.split(',')
+		@cooking_instructions_array = Recipe.find(params[:id]).cooking_instructions.split(',')
 	end
 
 	def new

@@ -24,11 +24,15 @@
     <%  @ingredients_array.each do |ingredient| %>
       <li><%= ingredient %> </li>
     <% end %>
-
   </ul>
 </p>
 
 <p>
   <strong>Instructions:</strong>
-  <%= @recipe.cooking_instructions %>
+  <ol>
+    <%  @cooking_instructions_array.each do |instruction| %>
+      <li><%= instruction %> </li>
+    <% end %>
+  </ol>
 </p>
+
