@@ -11,14 +11,17 @@ class RecipesController < ApplicationController
 	end
 
 	def new
-		
+		@recipe = Recipe.new
 	end
 	
 	def create
 		@recipe = Recipe.new(recipe_params)
 
-		@recipe.save
-		redirect_to @recipe
+		if @recipe.save
+			redirect_to @recipe
+		else
+			render 'new'
+		end
 	end
 
 	private

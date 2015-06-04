@@ -1,6 +1,4 @@
 class Recipe < ActiveRecord::Base
-	# serialize :cooking_instructions, Array
-	# serialize :ingredients, Array
 
 	validates :name, presence: true
 	validates :description, presence: true
