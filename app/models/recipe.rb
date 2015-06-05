@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
-
+	has_many :comments
+	
 	validates :name, presence: true
 	validates :description, presence: true
 	validates :ingredients, presence: true

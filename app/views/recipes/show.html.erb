@@ -36,6 +36,31 @@
   </ol>
 </p>
 
-<%= link_to 'Edit Recipe', edit_recipe_path(@recipe), class: "btn btn-primary" %>
-<%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+<h2>Comments</h2>
+<% @recipe.comments.each do |comment| %>
+  <p>
+    <strong>Name:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@recipe, @recipe.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter, "Name" %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body, "Comments" %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit 'Add Comment', :class => 'btn btn-success' %>
+  </p>
+<% end %>
 

@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
 		@recipe = Recipe.new(recipe_params)
 
 		if @recipe.save
-			redirect_to @recipe
+			redirect_to @recipe, notice: "Success! You've added a new recipe."
 		else
 			render 'new'
 		end

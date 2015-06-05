@@ -45,7 +45,8 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit 'Save Changes', :class => 'btn btn-primary' %>
+    <%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
 <% end %>
  
