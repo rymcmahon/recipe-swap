@@ -1,51 +1,6 @@
 <h1>New Recipe</h1>
 
-<%= form_for :recipe, url: recipes_path do |f| %>
-  <% if @recipe.errors.any? %>
-    <div class="alert alert-dismissible alert-danger">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <h2>Oops! You forgot to fill in
-        <%= pluralize(@recipe.errors.count, "field") %>:
-      </h2>
-      <ul>
-        <% @recipe.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+<%= render 'form' %>
+  
 
-  <p>
-    <%= f.label :prep_time %><br>
-    <%= f.text_field :prep_time %>
-  </p>
-
-  <p>
-    <%= f.label :cooking_time %><br>
-    <%= f.text_field :cook_time %>
-  </p>
-
-  <p>
-    <%= f.label :ingredients %><br>
-    <%= f.text_area :ingredients %>
-  </p>
-
-  <p>
-    <%= f.label :cooking_instructions %><br>
-    <%= f.text_area :cooking_instructions %>
-  </p>
- 
-  <p>
-    <%= f.submit 'Save Recipe', :class => 'btn btn-success' %>
-  </p>
-<% end %>
  
