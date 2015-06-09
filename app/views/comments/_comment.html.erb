@@ -9,5 +9,8 @@
 </p>
 
 <p>
-  <%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+
+	<% if current_user == @recipe.user %>
+  	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </p>

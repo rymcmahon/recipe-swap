@@ -3,7 +3,9 @@
 <%= render 'form' %>
  
 <p>
-  <%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if current_user == @recipe.user %>
+  	<%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
 </p>
 
  

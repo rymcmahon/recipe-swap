@@ -43,7 +43,9 @@
   </p>
 
 	<p>
-		<%= f.submit 'Save Changes', :class => 'btn btn-primary' %>
+    <% if current_user == @recipe.user %>
+		  <%= f.submit 'Save Changes', :class => 'btn btn-primary' %>
+    <% end %>
 	</p>
  
 <% end %>
