@@ -10,7 +10,7 @@
 
 <p>
 
-	<% if current_user == @recipe.user %>
+	<% if current_user == @recipe.user || current_user.admin? %>
   	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </p>

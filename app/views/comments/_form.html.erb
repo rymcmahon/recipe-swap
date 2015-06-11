@@ -8,6 +8,8 @@
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.submit 'Save Comment', :class => 'btn btn-primary'%>
+    <% if user_signed_in? %>
+      <%= f.submit 'Save Comment', :class => 'btn btn-primary'%>
+    <% end %>
   </p>
 <% end %>
