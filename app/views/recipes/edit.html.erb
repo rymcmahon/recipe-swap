@@ -49,12 +49,12 @@
     <%= f.text_area :cooking_instructions %>
   </p>
   <p>
-		<% if current_user == @recipe.user %>
+		<% if current_user == @recipe.user || current_user.admin? %>
     	<%= f.submit "Edit Recipe", class: "btn btn-primary"%>
     <% end %>
   </p>
 <p>
-  <% if current_user == @recipe.user %>
+  <% if current_user == @recipe.user || current_user.admin?  %>
   	<%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
 	<% end %>
 </p>
