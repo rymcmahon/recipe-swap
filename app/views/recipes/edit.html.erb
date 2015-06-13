@@ -1,62 +1,78 @@
-<h1>Edit Recipe</h1>
+<h1 id="new-header-center">Edit Recipe</h1>
+  <div class="well bs-component">
+    <%= form_for :recipe, :url => recipe_path(@recipe), :html => { :multipart => true, :class => "form-horizontal", :role => 'form' }, method: :patch do |f| %>
 
-<%= form_for :recipe, :url => recipe_path(@recipe), :html => { :multipart => true }, method: :patch do |f| %>
-<% if @recipe.errors.any? %>
-    <div class="alert alert-dismissible alert-danger">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <h2>Oops! You forgot to fill in
-        <%= pluralize(@recipe.errors.count, "field") %>:
-      </h2>
-      <ul>
-        <% @recipe.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
- 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.label "Upload Image" %><br>
-    <%= f.file_field :image %>
-  </p>
-  <p>
-    <%= f.label :prep_time %><br>
-    <%= f.text_field :prep_time %>
-  </p>
-
-  <p>
-    <%= f.label :cooking_time %><br>
-    <%= f.text_field :cook_time %>
-  </p>
-
-  <p>
-    <%= f.label :ingredients %><br>
-    <%= f.text_area :ingredients %>
-  </p>
-
-  <p>
-    <%= f.label :cooking_instructions %><br>
-    <%= f.text_area :cooking_instructions %>
-  </p>
-  <p>
-		<% if current_user == @recipe.user || current_user.admin? %>
-    	<%= f.submit "Edit Recipe", class: "btn btn-primary"%>
+    <% if @recipe.errors.any? %>
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <h2>Oops! You forgot to fill in
+            <%= pluralize(@recipe.errors.count, "field") %>:
+          </h2>
+          <ul>
+            <% @recipe.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+     
+      <fieldset>
+        <div class="form-group">
+          <%= f.label :name, {class: "col-sm-3 control-label"} %>
+          <div class="col-sm-6">
+            <%= f.text_field :name, class: "form-control", placeholder: "Your Name" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-sm-3 control-label" %>
+          <div class="col-sm-6">
+            <%= f.text_area :description, class: "form-control", placeholder: "What makes this recipe special?" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label "Upload Image", class: "col-sm-3 control-label" %>
+            <div class="col-sm-6">
+            <%= f.file_field :image %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :prep_time, class: "col-sm-3 control-label" %>
+          <div class="col-sm-6">
+            <%= f.text_field :prep_time, class: "form-control", placeholder: "How long does it take to prep?" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :cooking_time, class: "col-sm-3 control-label" %>
+          <div class="col-sm-6">
+            <%= f.text_field :cook_time, class: "form-control", placeholder: "How long does it take to cook?" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :ingredients, class: "col-sm-3 control-label" %>
+          <div class="col-sm-6">
+            <%= f.text_area :ingredients, class: "form-control", placeholder: "Enter each ingredient separated by a comma." %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :cooking_instructions, class: "col-sm-3 control-label" %>
+          <div class="col-sm-6">
+            <%= f.text_area :cooking_instructions, class: "form-control", placeholder: "Enter each instruction separated by a comma." %>
+          </div>
+        </div>
+        <div class="form-group">
+      		<% if current_user == @recipe.user || current_user.admin? %>
+          <div class="col-sm-offset-3 col-sm-6">
+          	<%= f.submit "Edit Recipe", class: "btn btn-primary"%>
+          <% end %>
+          </div>
+        </div>
+        <div class="form-group">
+          <% if current_user == @recipe.user || current_user.admin?  %>
+          <div class="col-sm-offset-3 col-sm-9">
+  	       <%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+	       <% end %>
+          </div>
+        </div>
+      </fieldset>
     <% end %>
-  </p>
-<p>
-  <% if current_user == @recipe.user || current_user.admin?  %>
-  	<%= link_to 'Delete Recipe', recipe_path(@recipe), class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-	<% end %>
-</p>
-
-<% end %>
+  </div>
