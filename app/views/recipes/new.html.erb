@@ -36,6 +36,12 @@
           </div>
         </div>
         <div class="form-group">
+          <%= f.label "Select Meal", class: "col-sm-3 control-label" %>
+            <div class="col-sm-6">
+            <%= f.collection_select :meal_id, Meal.all, :id, :name %>
+          </div>
+        </div>        
+        <div class="form-group">
           <%= f.label :prep_time, class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= f.text_field :prep_time, class: "form-control", placeholder: "How long does it take to prep?" %>

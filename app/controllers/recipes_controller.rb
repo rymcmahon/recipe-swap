@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
 		@recipe = Recipe.find(params[:id])
 		@ingredients_array = Recipe.find(params[:id]).ingredients.split(',')
 		@cooking_instructions_array = Recipe.find(params[:id]).cooking_instructions.split(',')
+		@meals = Meal.all
 	end
 
 	def new
@@ -49,7 +50,7 @@ class RecipesController < ApplicationController
 
 	private
 		def recipe_params
-			params.require(:recipe).permit(:name, :description, :prep_time, :cook_time, :ingredients, :cooking_instructions, :image)
+			params.require(:recipe).permit(:name, :description, :meal_id, :prep_time, :cook_time, :ingredients, :cooking_instructions, :image)
 		end
 end
 
