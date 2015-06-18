@@ -3,7 +3,7 @@
   <div class='row text-center index-grid'>
     <% group.each do |recipe| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <img src="<%= recipe.image %>" >
+        <%= image_tag recipe.image.url(:med) %>
         <h3><%= recipe.name %></h3>
         <div><%= recipe.description %></div>
       </div>
