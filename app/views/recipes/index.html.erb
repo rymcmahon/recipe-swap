@@ -1,15 +1,12 @@
-<h1>All Recipes</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Summary</th>
-  </tr>
- 
-  <% @recipes.each do |recipe| %>
-    <tr>
-      <td><%= recipe.name %></td>
-      <td><%= recipe.description %></td>
-    </tr>
-  <% end %>
-</table>
+<% @recipes.in_groups_of(4, false).each do |group| %>
+  <div class='row text-center index-grid'>
+    <% group.each do |recipe| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <img src="<%= recipe.image %>" >
+        <h3><%= recipe.name %></h3>
+        <div><%= recipe.description %></div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

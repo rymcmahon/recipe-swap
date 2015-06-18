@@ -1,5 +1,5 @@
-<h1 id="new-header-center">Edit Recipe</h1>
-  <div class="well bs-component">
+<div class="well bs-component">
+  <legend>Edit Recipe</legend>
     <%= form_for :recipe, :url => recipe_path(@recipe), :html => { :multipart => true, :class => "form-horizontal", :role => 'form' }, method: :patch do |f| %>
 
     <% if @recipe.errors.any? %>
@@ -18,13 +18,13 @@
      
       <fieldset>
         <div class="form-group">
-          <%= f.label :name, {class: "col-sm-3 control-label"} %>
+          <%= f.label :name, "Recipe Title", {class: "col-sm-3 control-label"} %>
           <div class="col-sm-6">
             <%= f.text_field :name, class: "form-control", placeholder: "Your Name" %>
           </div>
         </div>
         <div class="form-group">
-          <%= f.label :description, class: "col-sm-3 control-label" %>
+          <%= f.label :description, "Summary", class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= f.text_area :description, class: "form-control", placeholder: "What makes this recipe special?" %>
           </div>
@@ -42,13 +42,13 @@
           </div>
         </div> 
         <div class="form-group">
-          <%= f.label :prep_time, class: "col-sm-3 control-label" %>
+          <%= f.label :prep_time, "Prep Time", class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= f.text_field :prep_time, class: "form-control", placeholder: "How long does it take to prep?" %>
           </div>
         </div>
         <div class="form-group">
-          <%= f.label :cooking_time, class: "col-sm-3 control-label" %>
+          <%= f.label :cooking_time, "Cooking Time", class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= f.text_field :cook_time, class: "form-control", placeholder: "How long does it take to cook?" %>
           </div>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="form-group">
-          <%= f.label :cooking_instructions, class: "col-sm-3 control-label" %>
+          <%= f.label :cooking_instructions, "Cooking Instructions", class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
             <%= f.text_area :cooking_instructions, class: "form-control", placeholder: "Enter each instruction separated by a comma." %>
           </div>
