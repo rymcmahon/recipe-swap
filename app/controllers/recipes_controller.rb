@@ -33,12 +33,15 @@ class RecipesController < ApplicationController
 
 	def update
 		@recipe = Recipe.find(params[:id])
+		@recipe.image.destroy 
+		@recipe.image.clear
 
 		if @recipe.update(recipe_params)
 			redirect_to @recipe
 		else
 			render 'edit'	
 		end
+
 	end
 
 	def destroy
