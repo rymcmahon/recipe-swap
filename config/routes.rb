@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :recipes do
     resources :comments
   end
+
+   get 'users/:id/recipes' => 'users#recipes', :as => :user_recipes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
