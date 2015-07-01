@@ -1,6 +1,3 @@
-require 'github/markup'
-GitHub::Markup.render('README.markdown', "* One\n* Two")
-
 == README
 
 # About ToTaste
