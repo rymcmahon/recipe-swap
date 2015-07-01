@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# About ToTaste
 
-Things you may want to cover:
+ToTaste is an app that that allows friends and family to share recipes. After signing up, users can add recipes complete with pictures, ingredient lists, cooking times, etc.
 
-* Ruby version
+Users can also comment on recipes and collect recipes that they really like.
 
-* System dependencies
+ToTaste is built with Rails and vital dependecies include: 
+* [Paperclip](https://github.com/thoughtbot/paperclip) for uploading recipe pictures
+* [Devise](https://github.com/plataformatec/devise) for authentication and authorization
+* [RSpec](https://github.com/rspec/rspec) for testing
+* [Bootswatch-rails](https://github.com/maxim/bootswatch-rails) for the front-end theme
 
-* Configuration
+## Author
 
-* Database creation
+Ryan McMahon
 
-* Database initialization
+## Contact
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+rymcmahon716@gmail.com
