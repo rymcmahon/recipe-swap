@@ -1,6 +1,6 @@
 # About ToTaste
 
-ToTaste is an app that that allows friends and family to share recipes. After signing up, users can add recipes with picture of the finished dish, ingredient list, cooking instructions, prep and cooking times, etc.
+ToTaste is an app that that allows friends and family to share recipes. After signing up, users can create recipes by uploading an ingredient list, cooking instructions, picutres, etc.
 
 Users can also comment on recipes and collect recipes they like.
 
