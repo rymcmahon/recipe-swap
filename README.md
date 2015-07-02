@@ -1,10 +1,8 @@
-== README
-
 # About ToTaste
 
-ToTaste is an app that that allows friends and family to share recipes. After signing up, users can add recipes complete with pictures, ingredient lists, cooking times, etc.
+ToTaste is an app that that allows friends and family to share recipes. After signing up, users can add recipes with picture of the finished dish, ingredient list, cooking instructions, prep and cooking times, etc.
 
-Users can also comment on recipes and collect recipes that they really like.
+Users can also comment on recipes and collect recipes they like.
 
 ToTaste is built with Rails and vital dependecies include: 
 * [Paperclip](https://github.com/thoughtbot/paperclip) for uploading recipe pictures
