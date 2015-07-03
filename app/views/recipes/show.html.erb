@@ -1,53 +1,55 @@
-<p>
-  <strong>Title:</strong>
-  <%= @recipe.name %>
-</p>
- 
-<p>
-  <strong>Summary:</strong>
-  <%= @recipe.description %>
-</p>
+  <div class="jumbotron">
+  <p>
+    <strong>Title:</strong>
+    <%= @recipe.name %>
+  </p>
+   
+  <p>
+    <strong>Summary:</strong>
+    <%= @recipe.description %>
+  </p>
 
-<p>
-  <%= image_tag @recipe.image.url(:large) %>
-</p>
+  <p>
+    <%= image_tag @recipe.image.url(:large) %>
+  </p>
 
-<p>
-  <strong>Meal Type:</strong>
-  <%= @recipe.meal.name %>
-</p>
+  <p>
+    <strong>Meal Type:</strong>
+    <%= @recipe.meal.name %>
+  </p>
 
-<p>
-  <strong>Prep Time:</strong>
-  <%= @recipe.prep_time %>
-</p>
+  <p>
+    <strong>Prep Time:</strong>
+    <%= @recipe.prep_time %>
+  </p>
 
-<p>
-  <strong>Cook Time:</strong>
-  <%= @recipe.cook_time %>
-</p>
+  <p>
+    <strong>Cook Time:</strong>
+    <%= @recipe.cook_time %>
+  </p>
 
-<p>
-  <strong>Ingredients:</strong>
-  <ul>
-    <%  @ingredients_array.each do |ingredient| %>
-      <li><%= ingredient %> </li>
-    <% end %>
-  </ul>
-</p>
+  <p>
+    <strong>Ingredients:</strong>
+    <ul>
+      <%  @ingredients_array.each do |ingredient| %>
+        <li><%= ingredient %> </li>
+      <% end %>
+    </ul>
+  </p>
 
-<p>
-  <strong>Instructions:</strong>
-  <ol>
-    <%  @cooking_instructions_array.each do |instruction| %>
-      <li><%= instruction %> </li>
-    <% end %>
-  </ol>
-</p>
+  <p>
+    <strong>Instructions:</strong>
+    <ol>
+      <%  @cooking_instructions_array.each do |instruction| %>
+        <li><%= instruction %> </li>
+      <% end %>
+    </ol>
+  </p>
 
-<h2>Comments</h2>
-<%= render @recipe.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
- 
+  <h2>Comments</h2>
+  <%= render @recipe.comments %>
+   
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
+   
+</div>

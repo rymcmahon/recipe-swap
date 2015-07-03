@@ -1,26 +1,25 @@
 <% @recipes.each do |recipe| %>
- <p>
-  <strong>Title:</strong>
-  <%= recipe.name %>
-</p>
- 
-<p>
-  <strong>Summary:</strong>
-  <%= recipe.description %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= recipe.name %>
+	</p>
+	 
+	<p>
+	  <strong>Summary:</strong>
+	  <%= recipe.description %>
+	</p>
 
-<p>
-  <img src="<%= recipe.image(:large) %>"
-</p>
+	<p>
+	  <img src="<%= recipe.image(:large) %>"
+	</p>
 
-<p>
-  <strong>Prep Time:</strong>
-  <%= recipe.prep_time %>
-</p>
+	<p>
+	  <strong>Prep Time:</strong>
+	  <%= recipe.prep_time %>
+	</p>
 
-<p>
-  <strong>Cook Time:</strong>
-  <%= recipe.cook_time %>
-</p>
-
+	<p>
+	  <strong>Cook Time:</strong>
+	  <%= recipe.cook_time %>
+	</p>
 <% end %>
