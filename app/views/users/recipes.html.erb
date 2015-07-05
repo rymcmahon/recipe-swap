@@ -1,25 +1,16 @@
-<% @recipes.each do |recipe| %>
-	<p>
-	  <strong>Title:</strong>
-	  <%= recipe.name %>
-	</p>
-	 
-	<p>
-	  <strong>Summary:</strong>
-	  <%= recipe.description %>
-	</p>
-
-	<p>
-	  <img src="<%= recipe.image(:large) %>"
-	</p>
-
-	<p>
-	  <strong>Prep Time:</strong>
-	  <%= recipe.prep_time %>
-	</p>
-
-	<p>
-	  <strong>Cook Time:</strong>
-	  <%= recipe.cook_time %>
-	</p>
+<% @recipes.in_groups_of(4, false).each do |group| %>
+  <div class='row text-center index-grid'>
+    <% group.each do |recipe| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+				<div class="thumbnail">
+      		<%= image_tag recipe.image.url(:med) %>
+      		<div class="caption">
+        		<h3><%= recipe.name %></h3>
+        		<p><%= recipe.description %></p>
+        		<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      		</div>
+    		</div>
+      </div>
+    <% end %>
+  </div>
 <% end %>
