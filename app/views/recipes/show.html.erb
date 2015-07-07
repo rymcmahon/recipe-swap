@@ -1,55 +1,83 @@
-  <div class="jumbotron">
-  <p>
-    <strong>Title:</strong>
-    <%= @recipe.name %>
-  </p>
-   
-  <p>
-    <strong>Summary:</strong>
-    <%= @recipe.description %>
-  </p>
+<!-- <div class="jumbotron">
+  <div class="row">
+    <div class="col-md-6"><%= image_tag @recipe.image.url(:large) %></div>
+    <div class="col-md-6"><h2><%= @recipe.name %></h2><p>“<%= @recipe.description %>”</p></div>
+  </div>
+  <div class="row row-buffer">
+    <div class="col-md-4">
+      <p><strong>Meal Type:</strong> <%= @recipe.meal.name %></p>
+    </div>
+    <div class="col-md-4">
+      <p><strong>Prep Time:</strong> <%= @recipe.prep_time %></p>
+    </div>
+    <div class="col-md-4"><p><strong>Cook Time:</strong> <%= @recipe.cook_time %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Ingredients:</strong>
+        <ul>
+          <% @ingredients_array.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p><strong>Instructions:</strong>
+        <ol>
+          <%  @cooking_instructions_array.each do |instruction| %>
+          <li><%= instruction %></li>
+          <% end %>
+        </ol>
+      </p>
+    </div>
+  </div>
+</div> -->
 
-  <p>
-    <%= image_tag @recipe.image.url(:large) %>
-  </p>
-
-  <p>
-    <strong>Meal Type:</strong>
-    <%= @recipe.meal.name %>
-  </p>
-
-  <p>
-    <strong>Prep Time:</strong>
-    <%= @recipe.prep_time %>
-  </p>
-
-  <p>
-    <strong>Cook Time:</strong>
-    <%= @recipe.cook_time %>
-  </p>
-
-  <p>
-    <strong>Ingredients:</strong>
-    <ul>
-      <%  @ingredients_array.each do |ingredient| %>
-        <li><%= ingredient %> </li>
-      <% end %>
-    </ul>
-  </p>
-
-  <p>
-    <strong>Instructions:</strong>
-    <ol>
-      <%  @cooking_instructions_array.each do |instruction| %>
-        <li><%= instruction %> </li>
-      <% end %>
-    </ol>
-  </p>
-
-  <h2>Comments</h2>
-  <%= render @recipe.comments %>
-   
-  <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>
-   
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2 class="panel-title">From the kitchen of <%= %></h2>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag @recipe.image.url(:large) %>
+      </div>
+      <div class="col-md-6">
+        <h2><%= @recipe.name %></h2>
+        <p>“<%= @recipe.description %>”</p>
+        <p><strong>Meal:</strong> <%= @recipe.meal.name %> 
+        <strong>Prep:</strong> <%= @recipe.prep_time %> 
+        <strong>Cook:</strong> <%= @recipe.cook_time %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 padding-start">
+        <h3>Ingredients:</h3>
+        <ul>
+          <% @ingredients_array.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-md-6 padding-start">
+        <h3>Instructions:</h3>
+        <ol>
+          <%  @cooking_instructions_array.each do |instruction| %>
+          <li><%= instruction %></li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
 </div>
+<%= render @recipe.comments %>
+ 
+<h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
+ 
+
+
+
+      
