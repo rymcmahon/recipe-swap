@@ -5,6 +5,20 @@
     <%= devise_error_messages! %>
 
     <div class="form-group">
+      <%= f.label "First Name", class: "col-sm-4 control-label" %>
+      <div class="col-sm-4">
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label "Last Name", class: "col-sm-4 control-label" %>
+      <div class="col-sm-4">
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+    </div>
+    
+    <div class="form-group">
       <%= f.label :email, class: "col-sm-4 control-label" %>
       <div class="col-sm-4">
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
