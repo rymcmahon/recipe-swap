@@ -14,6 +14,7 @@ class RecipesController < ApplicationController
 		@ingredients_array = Recipe.find(params[:id]).ingredients.split(',')
 		@cooking_instructions_array = Recipe.find(params[:id]).cooking_instructions.split(',')
 		@meals = Meal.all
+		@recipe_user = Recipe.find(params[:id]).user_id
 	end
 
 	def new
