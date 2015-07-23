@@ -1,5 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootswatch/sandstone/variables";
 @import "bootstrap";
-body { padding-top: 60px; } #new-header-center {text-align: center !important; margin-bottom: 20px; } legend {text-align: center;}.bs-component {max-width: 960px !important; margin: 0 auto !important;} #recipe_image {margin-top: 13px;} #recipe_meal_id {margin-top: 14px;} .primary-btn-margin { margin-top: 20px; } .index-grid {margin: 40px auto;} .row-buffer {margin-top: 10px;} .padding-start h3 { -webkit-padding-start: 24px;}
+ .navbar {min-height: 94px;} .navbar-brand {padding: 5px 23px;} .navbar .nav > li > a {font-size: 13px !important; margin-top: 15px;} #new-header-center {text-align: center !important; margin-bottom: 20px; } legend {text-align: center;}.bs-component {max-width: 960px !important; margin: 0 auto !important;} #recipe_image {margin-top: 13px;} #recipe_meal_id {margin-top: 14px;} .primary-btn-margin { margin-top: 20px; } .index-grid {margin: 40px auto;} .row-buffer {margin-top: 10px;} .padding-start h3 { -webkit-padding-start: 24px;} .recipe-title{font-size: 17px !important; text-transform: none !important;} .logo-tag {margin-left: -35px !important; margin-top: 20px; font-family: Georgia, Times, "Times New Roman", serif; font-size: 25px;}
 @import "bootswatch/sandstone/bootswatch";
