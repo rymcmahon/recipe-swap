@@ -34,7 +34,9 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'All Recipes', recipes_path %><span class="sr-only">(current)</span></li>
         <li><%= link_to 'Add Recipe', new_recipe_path %></li>
-        <li><a href="#">My Recipes</a></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'My Recipes', user_recipes_path(current_user.id) %></li>
+        <% end %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Find Recipes <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
