@@ -1,16 +1,17 @@
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+<div class="well well-lg media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= comment.user.first_name %> <%= comment.user.last_name %> wrote:</h4>
+    <%= comment.body %>
+  </div>
+	<p>
+		<% if comment.user == current_user || current_user.admin %>
+	  	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
+	  <% end %>
+	</p>
+</div>
 
-<p>
-
-	<% if current_user == @recipe.user || current_user.admin? %>
-  	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-</p>

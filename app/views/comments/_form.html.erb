@@ -1,12 +1,9 @@
 <%= form_for([@recipe, @recipe.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
+  <h3> Add a comment, <%= current_user.first_name %>! </h3>
+  <div class="form-group">
+          <div class="col-sm-10">
+            <%= f.text_field :body, class: "form-control input-lg"%>
+          </div>
   <p>
     <% if user_signed_in? %>
       <%= f.submit 'Save Comment', :class => 'btn btn-primary'%>
