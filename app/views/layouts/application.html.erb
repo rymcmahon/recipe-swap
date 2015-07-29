@@ -41,15 +41,15 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Find Recipes <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Breakfast</a></li>
+            <li><%= link_to 'Breakfast', meal_recipes_path(:id => 1) %></li>
             <li class="divider"></li>
-            <li><a href="#">Lunch</a></li>
+            <li><%= link_to 'Lunch', meal_recipes_path(:id => 2) %></li>
             <li class="divider"></li>
-            <li><a href="#">Dinner</a></li>
+            <li><%= link_to 'Dinner', meal_recipes_path(:id => 3) %></li>
             <li class="divider"></li>
-            <li><a href="#">Dessert</a></li>
+            <li><%= link_to 'Appetizer', meal_recipes_path(:id => 4) %></li>
             <li class="divider"></li>
-            <li><a href="#">Other</a></li>
+            <li><%= link_to 'Other', meal_recipes_path(:id => 5) %></li>
           </ul>
         </li>
       </ul>
