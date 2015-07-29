@@ -26,6 +26,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li><a href="/users/sign_out" data-method="delete" rel="nofollow">Sign Out</a></li>
+          <li><a class="sign-in-welcome">Welcome, <%= current_user.first_name %>!</a></li>
         <% else %> 
           <li><a href="/users/sign_up">Sign Up</a></li>
           <li><a href="/users/sign_in">Log In</a></li>
