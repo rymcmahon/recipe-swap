@@ -1,5 +1,72 @@
 @import "bootstrap-sprockets";
-@import "bootswatch/sandstone/variables";
+@import "bootswatch/flatly/variables";
 @import "bootstrap";
- .navbar {min-height: 94px;} .navbar-brand {padding: 5px 23px;} .navbar .nav > li > a {font-size: 13px !important; margin-top: 15px;} #new-header-center {text-align: center !important; margin-bottom: 20px; } legend {text-align: center;}.bs-component {max-width: 960px !important; margin: 0 auto !important;} #recipe_image {margin-top: 13px;} #recipe_meal_id {margin-top: 14px;} .primary-btn-margin { margin-top: 20px; } .index-grid {margin: 40px auto;} .row-buffer {margin-top: 10px;} .padding-start h3 { -webkit-padding-start: 24px;} .recipe-title{font-size: 17px !important; text-transform: none !important;} .logo-tag {margin-left: -35px !important; margin-top: 20px; font-family: Georgia, Times, "Times New Roman", serif; font-size: 25px;} .panel {width: 95%; margin: 20px auto;} .well-lg {width: 95%; margin: 10px auto;} .panel-header-charcoal {background-color: #3E3F3A !important;} .panel-info-border {border-color: #d6d7d4 !important;} .sign-in-welcome {color: #ffffff !important; text-transform: none !important; }
-@import "bootswatch/sandstone/bootswatch";
+ 
+body {
+ 	padding-top: 50px;
+} 
+.navbar {
+ 	min-height: 94px;
+} 
+.navbar-brand {
+ 	padding: 5px 23px;
+} 
+.navbar .nav > li > a {
+	font-size: 12px !important; margin-top: 15px;
+} 
+#new-header-center {
+	text-align: center !important; margin-bottom: 20px;
+} 
+legend {
+	text-align: center;
+}
+.bs-component {
+	max-width: 960px !important; margin: 0 auto !important;
+} 
+#recipe_image {
+	margin-top: 13px;
+} 
+#recipe_meal_id {
+	margin-top: 14px;
+} 
+.primary-btn-margin {
+	margin-top: 20px;
+} 
+.index-grid {
+	margin: 40px auto;
+} 
+.row-buffer {
+	margin-top: 10px;
+} 
+.padding-start h3 {
+	-webkit-padding-start: 24px;
+} 
+.recipe-title {
+	font-size: 17px !important; text-transform: none !important;
+} 
+.logo-tag {
+	margin-left: -35px !important; margin-top: 20px; font-family: Georgia, Times, "Times New Roman", serif; font-size: 25px;
+} 
+.panel {
+	width: 95%; margin: 20px auto;
+} 
+.well-lg {
+	width: 95%; margin: 10px auto;
+} 
+.panel-header-charcoal {
+	background-color: #3E3F3A !important;
+} 
+.panel-info-border {
+	border-color: #d6d7d4 !important;
+} 
+.sign-in-welcome {
+	color: #95a5a6 !important;
+}
+
+@media (max-width: 790px) {
+	.navbar .nav > li > a {
+		font-size: 11px !important;
+	}
+}
+
+@import "bootswatch/flatly/bootswatch";
