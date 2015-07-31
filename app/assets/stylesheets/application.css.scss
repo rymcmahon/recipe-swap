@@ -12,7 +12,7 @@ body {
  	padding: 5px 23px;
 } 
 .navbar .nav > li > a {
-	font-size: 12px !important; margin-top: 15px;
+	font-size: 13px !important; margin-top: 15px;
 } 
 #new-header-center {
 	text-align: center !important; margin-bottom: 20px;
@@ -60,10 +60,10 @@ legend {
 	border-color: #d6d7d4 !important;
 } 
 .sign-in-welcome {
-	color: #95a5a6 !important;
+	color: #2C3E50 !important;
 }
 
-@media (max-width: 790px) {
+@media (max-width: 850px) {
 	.navbar .nav > li > a {
 		font-size: 11px !important;
 	}
