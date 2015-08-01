@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 		@recipe = Recipe.find(params[:recipe_id])
 		@comment = @recipe.comments.create(comment_params)
 		redirect_to recipe_path(@recipe)
-		@comment.user_id = current_user.id
+		@comment.recipe.user_id = current_user.id
 		@comment.save
 	end
 

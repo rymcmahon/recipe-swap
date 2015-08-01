@@ -5,11 +5,11 @@
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading"><%= comment.user.first_name %> <%= comment.user.last_name %> wrote:</h4>
+    <h4 class="media-heading"><%= comment.recipe.user.first_name %> <%= comment.recipe.user.last_name %> wrote:</h4>
     <%= comment.body %>
   </div>
 	<p>
-		<% if comment.user == current_user || current_user.admin %>
+		<% if comment.recipe.user == current_user || current_user.admin %>
 	  	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 	  <% end %>
 	</p>
