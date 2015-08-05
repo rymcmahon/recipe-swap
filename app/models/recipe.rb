@@ -21,6 +21,10 @@ class Recipe < ActiveRecord::Base
     @delete_image = value
   end
 
+  def self.search(search)
+	  where("name LIKE ? OR ingredients LIKE ? OR cooking_instructions LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
+	end
+
   private
 	  def destroy_image?
 	    self.image.clear if @delete_image == "1"

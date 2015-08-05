@@ -69,4 +69,12 @@ legend {
 	}
 }
 
+@media (min-width: 768px) {
+	.navbar-right {
+		margin-right: -10px;
+	}
+	.navbar-form {
+		margin-top: 27px;
+	}
+}
 @import "bootswatch/flatly/bootswatch";

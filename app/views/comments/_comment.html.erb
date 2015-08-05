@@ -9,7 +9,7 @@
     <%= comment.body %>
   </div>
 	<p>
-		<% if comment.user == current_user || current_user.admin %>
+		<% if comment.user == current_user || current_user.try(:admin?) %>
 	  	<%= link_to 'Delete Comment', [comment.recipe, comment], class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %>
 	  <% end %>
 	</p>
