@@ -15,3 +15,9 @@
   </div>
 <% end %>
 
+<% if @recipes.blank? %>
+  <div class="alert alert-dismissible alert-info">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+  </div>
+<% end %>
