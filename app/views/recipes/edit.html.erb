@@ -30,18 +30,9 @@
           </div>
         </div>
         <div class="form-group">
-          <%= f.label "Upload Image", class: "col-sm-3 control-label" %>
-            <div class="col-sm-6">
-            <%= f.file_field :image %>
-          </div>
+          <a href='/recipes/:id/edit', > Change Image?</a>
         </div>
-        <div class="form-group">
-          <%= f.label(:delete_image, "Delete Image",  class: "col-sm-3 control-label") %>
-            <div class="col-sm-6">
-          <%= f.check_box(:delete_image, options = {}, checked_value = "1", unchecked_value = "0")%>
-          </div>
-        </div>
-        <div class="form-group">
+        <div class="form-group">  
           <%= f.label "Select Meal", class: "col-sm-3 control-label" %>
             <div class="col-sm-6">  
             <%= f.collection_select :meal_id, Meal.all, :id, :name %>
@@ -88,4 +79,5 @@
       </fieldset>
     <% end %>
   </div>
-        
+         
+            
