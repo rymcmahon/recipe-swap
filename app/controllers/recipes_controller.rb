@@ -40,8 +40,6 @@ class RecipesController < ApplicationController
 
 	def update
 		@recipe = Recipe.find(params[:id])
-		@recipe.image.destroy 
-		@recipe.image.clear
 
 		if @recipe.update(recipe_params)
 			redirect_to @recipe
@@ -57,6 +55,13 @@ class RecipesController < ApplicationController
 
 		redirect_to recipes_path
 	end
+
+	def remove_image
+    @recipe = Recipe.find(params[:id])
+    @recipe.image = nil
+    @recipe.save
+    redirect_to @recipe, flash: { success: 'Recipe image was removed.' }
+  end
 
 	private
 		def recipe_params

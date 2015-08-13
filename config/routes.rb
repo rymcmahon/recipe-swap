@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   end
     resources :meals
 
-
+  get 'recipe/:id/remove_image', to: 'recipes#remove_image', as: 'remove_recipe_image'
    get 'users/:id/recipes' => 'users#recipes', :as => :user_recipes
    get 'meals/:id/recipes' => 'meals#recipes', :as => :meal_recipes
   # The priority is based upon order of creation: first created -> highest priority.
