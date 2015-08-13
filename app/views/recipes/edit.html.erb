@@ -32,7 +32,6 @@
         <div class="form-group">
           <%= link_to 'Change/Delete Image', edit_recipe_path(@recipe, :anchor => 'edit_image_form'), class: "col-sm-3 control-label" %>
           <div class="col-sm-6">
-            
             <%= image_tag @recipe.image.url(:small) %>
           </div>
         </div>
@@ -89,6 +88,29 @@
     </div>
     <div class="panel-body">
      <%= form_for @recipe, :html => {:class => "form-horizontal", :role => 'form', :id => "edit_image_form", :class => "form-horizontal"} do |f| %>
+       <% if @recipe.errors.any? %>
+          <div class="alert alert-dismissible alert-danger">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h2>Oops! You forgot to fill in
+              <%= pluralize(@recipe.errors.count, "field") %>:
+            </h2>
+            <ul>
+              <% @recipe.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.label 'Current Image', class: "col-sm-3 control-label" %>
+          <div class="col-sm-3">
+            <% if @recipe.image.exists? %>
+              <%= image_tag @recipe.image.url(:small) %>
+            <% else %>
+              <p class="form-control"> None </p>
+            <% end %>
+          </div>
+        </div>
         <div class="form-group">
           <div class="col-sm-offset-3 col-sm-6">
             <%= f.file_field :image %>
@@ -104,7 +126,7 @@
         <div class="form-group">
           <% if current_user == @recipe.user || current_user.admin? %>
           <div class="col-sm-offset-3 col-sm-6">
-            <%= link_to 'Delete Image', remove_recipe_image_path, class: "btn btn-danger btn-sm" %>
+            <%= link_to 'Delete Image', remove_recipe_image_path, class: "btn btn-danger btn-sm", data: { confirm: 'Are you sure?' } %>
           <% end %>
           </div>
         </div>
@@ -112,3 +134,4 @@
     </div>
 </div>
   
+            

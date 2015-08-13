@@ -60,7 +60,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.image = nil
     @recipe.save
-    redirect_to @recipe, flash: { success: 'Recipe image was removed.' }
+    redirect_to @recipe, notice: "Success! Recipe image was removed."
   end
 
 	private
