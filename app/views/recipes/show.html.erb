@@ -1,6 +1,9 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title recipe-title">From the Kitchen of <%= @recipe.user.first_name %> <%= @recipe.user.last_name %></h3>
+    <% if current_user == @recipe.user || current_user.admin?  %>
+      <%= link_to 'Edit Recipe', edit_recipe_path(:id => @recipe.id), class: "btn btn-info btn-xs float-rt-btn", role: "button" %>
+    <% end %>
   </div>
   <div class="panel-body">
     <div class="row">
@@ -42,18 +45,15 @@
   <div class="panel-heading recipe-title">Comments</div>
   <div class="panel-body">
     <%= render @recipe.comments %>
-
     <% if user_signed_in? || current_user.try(:admin?) %>
         <%= render 'comments/form' %>
       <% else %>
-
       <h4> Please <a href="/users/sign_in">Log In</a> to comment. </h4>
     <% end %>
   </div>
 </div>
+
+
  
-
-
-
-      
-       
+  
+  
