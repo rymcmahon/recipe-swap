@@ -42,7 +42,7 @@
   </div>
 </div>
 <div class="panel panel-primary panel-info-border">
-  <div class="panel-heading recipe-title">Comments</div>
+  <div class="panel-heading">Comments</div>
   <div class="panel-body">
     <%= render @recipe.comments %>
     <% if user_signed_in? || current_user.try(:admin?) %>
