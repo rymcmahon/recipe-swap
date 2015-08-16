@@ -22,7 +22,7 @@ class Recipe < ActiveRecord::Base
   end
 
   def self.search(search)
-	  where("name LIKE ? OR ingredients LIKE ? OR cooking_instructions LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
+	  where("name LIKE ? OR ingredients LIKE ? OR cooking_instructions LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%") 
 	end
 
   private
