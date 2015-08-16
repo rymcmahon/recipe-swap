@@ -34,7 +34,8 @@ legend {
 	text-align: center;
 }
 .bs-component {
-	width: 95% !important; margin: 0 auto !important;
+	width: 95% !important; 
+	margin: 20px auto !important;
 } 
 #recipe_image {
 	margin-top: 13px;
@@ -98,7 +99,9 @@ legend {
 .footer-row {
 	margin-top: 20px;
 }
-
+.footer h5 {
+	display: inline;
+}
 @media (max-width: 1055px) {
 	.navbar .nav > li > a {
 		font-size: 12px !important;
