@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title recipe-title">From the Kitchen of <%= @recipe.user.first_name %> <%= @recipe.user.last_name %></h3>
-    <% if current_user == @recipe.user || current_user.admin?  %>
+    <% if current_user == @recipe.user && current_user.admin?  %>
       <%= link_to 'Edit Recipe', edit_recipe_path(:id => @recipe.id), class: "btn btn-info btn-xs float-rt-btn", role: "button" %>
     <% end %>
   </div>
