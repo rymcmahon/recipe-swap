@@ -1,3 +1,8 @@
+<div class="hero-bg-img img-responsive">
+  <h2><span>A Recipe-Sharing App<br/>
+    for Kith and Kin</span></h2>
+
+</div>
 <% @recipes.order("created_at desc").in_groups_of(4, false).each do |group| %>
   <div class='row text-center index-grid'>
     <% group.each do |recipe| %>
