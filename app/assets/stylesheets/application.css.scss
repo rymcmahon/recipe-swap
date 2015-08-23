@@ -37,7 +37,7 @@ body {
 	color: #ffffff;
 	padding: 5px;
 	text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(128, 128, 128, 0.5);
 }
 .alert {
 	width: 90%;
@@ -135,6 +135,33 @@ legend {
 	}
 	.navbar-form {
 		margin-top: 27px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-bg-img span  {
+		font-size: 75%;
+	}
+	div.navbar-header {
+		padding-bottom: 10px;
+	}
+	button.navbar-toggle {
+		margin-right: 35px;
+	}
+	input#search.form-control.input-sm {
+    width: 56%;
+    margin: 0 40px;
+    display: inline;
+    margin-right: 0;
+	}
+	.input .btn .btn-sm {
+		display: inline;
+	}
+	ul.nav.navbar-nav.navbar-right li a {
+		font-size: 14px !important;
+		padding-left: 41px;
+		border-bottom: 1px solid transparent;
+		border-color: #149c82;
 	}
 }
 @import "bootswatch/flatly/bootswatch";
