@@ -163,5 +163,11 @@ legend {
 		border-bottom: 1px solid transparent;
 		border-color: #149c82;
 	}
+	.footer-row {
+    margin-top: 10px;
+	}
+	.footer-row .glyphicon {
+		padding-bottom: 6px;
+	} 
 }
 @import "bootswatch/flatly/bootswatch";
