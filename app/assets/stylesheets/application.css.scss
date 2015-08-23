@@ -127,6 +127,10 @@ legend {
 	.navbar .nav > li > a {
 		font-size: 12px !important;
 	}
+	.nav > li > a {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
 }
 
 @media (min-width: 768px) {
