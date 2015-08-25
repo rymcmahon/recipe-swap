@@ -25,9 +25,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #devise for authentication
 gem 'devise'
-
+#Figaro for ENV 
 gem 'figaro'
-
+#AWS SDK
+gem 'aws-sdk', '< 2.0'
 #Paperclip
 gem "paperclip", "~> 4.2"
 # Use ActiveModel has_secure_password
