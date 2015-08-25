@@ -65,4 +65,7 @@ group :test do
 	gem 'selenium-webdriver', '~> 2.45.0'
 end
 
+#Heroku
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
 
