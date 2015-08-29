@@ -1,28 +1,28 @@
 <div class="hero-bg-img img-responsive">
   <h2><span>A Recipe-Sharing App<br/>
     for Kith and Kin</span></h2>
-
 </div>
-<% @recipes.order("created_at desc").in_groups_of(4, false).each do |group| %>
-  <div class='row text-center index-grid'>
-    <% group.each do |recipe| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-				<div class="thumbnail">
-      		<%= image_tag recipe.image.url(:med) %>
-      		<div class="caption">
-        		<h3><%= recipe.name %></h3>
-        		<p><%= recipe.description %></p>
-        		<p><%= link_to 'View Recipe', recipe_path(:id => recipe.id), class: "btn btn-primary btn-sm", role: "button" %></p>
-      		</div>
-    		</div>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
 <% if @recipes.blank? %>
   <div class="alert alert-dismissible alert-info">
     <button type="button" class="close" data-dismiss="alert">×</button>
     <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+  </div> 
+<% end %>
+<div id="all-recipes">
+<% @recipes.order("created_at desc").in_groups_of(4, false).each do |group| %>
+  <div class='row text-center index-grid'>
+    <% group.each do |recipe| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= image_tag recipe.image.url(:med) %>
+          <div class="caption">
+            <h3><%= recipe.name %></h3>
+            <p><%= recipe.description %></p>
+            <p><%= link_to 'View Recipe', recipe_path(:id => recipe.id), class: "btn btn-primary btn-sm", role: "button" %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 <% end %>
+</div>

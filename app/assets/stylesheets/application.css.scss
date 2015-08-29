@@ -140,6 +140,9 @@ legend {
 	.navbar-form {
 		margin-top: 27px;
 	}
+	#all-recipes {
+		padding-top: 58px;
+	}
 }
 
 @media (max-width: 768px) {
@@ -167,11 +170,22 @@ legend {
 		border-bottom: 1px solid transparent;
 		border-color: #149c82;
 	}
+	.recipe-title {
+		font-size: 15px !important;
+	}
+	.footer {
+		height: 125px;	
+	}
 	.footer-row {
     margin-top: 10px;
 	}
 	.footer-row .glyphicon {
 		padding-bottom: 6px;
+	}
+	.footer h5 {
+		font-size: 18px;
+		line-height: 1.85;
 	} 
 }
 @import "bootswatch/flatly/bootswatch";
+    

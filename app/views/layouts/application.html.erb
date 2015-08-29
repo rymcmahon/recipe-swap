@@ -23,7 +23,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav navbar-right">
-            <%= form_tag(recipes_path, :method => "get", id: "search-form", class: "navbar-form navbar-right form-group" ) do %>
+            <%= form_tag(recipes_path(:anchor => 'all-recipes'), :method => "get", id: "search-form", class: "navbar-form navbar-right form-group" ) do %>
               <%= text_field_tag :search, params[:search], placeholder: "Search Recipes", class: "form-control input-sm" %>
               <%= submit_tag "Search", :name => nil, class: "btn btn-sm" %>
             <% end %>
@@ -41,7 +41,7 @@
             <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'All Recipes', recipes_path %><span class="sr-only">(current)</span></li>
+            <li><%= link_to 'All Recipes', recipes_path(:anchor => 'all-recipes') %><span class="sr-only">(current)</span></li>
             <li><%= link_to 'Add Recipe', new_recipe_path %></li>
             <% if user_signed_in? %>
               <li><%= link_to 'My Recipes', user_recipes_path(current_user.id) %></li>
