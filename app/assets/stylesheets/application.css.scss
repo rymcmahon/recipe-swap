@@ -146,6 +146,9 @@ legend {
 }
 
 @media (max-width: 768px) {
+	body {
+		margin-bottom: 125px;
+	}
 	.hero-bg-img span  {
 		font-size: 75%;
 	}
