@@ -124,7 +124,6 @@ legend {
 }
 
 @media (max-width: 900px) {
-
 	.navbar-header {
 	  float: none;
 	}
@@ -143,7 +142,7 @@ legend {
 		border-width: 0 0 1px;
 	}
 	.navbar-collapse.collapse {
-	     display: none!important;
+	  display: none!important;
 	}
 	.navbar-nav {
 	  float: none!important;
@@ -157,25 +156,7 @@ legend {
     padding-bottom: 10px;
 	}
 	.collapse.in {
-	display:block !important;
-	}
-}
-
-@media (min-width: 768px) {
-	.navbar-right {
-		margin-right: 0;
-	}
-	.navbar-form {
-		margin-top: 27px;
-	}
-	#all-recipes {
-		padding-top: 58px;
-	}
-}
-
-@media (max-width: 768px) {
-	body {
-		margin-bottom: 125px;
+		display:block !important;
 	}
 	.hero-bg-img span  {
 		font-size: 75%;
@@ -204,6 +185,24 @@ legend {
 	.recipe-title {
 		font-size: 15px !important;
 	}
+}
+
+@media (min-width: 768px) {
+	.navbar-right {
+		margin-right: 0;
+	}
+	.navbar-form {
+		margin-top: 27px;
+	}
+	#all-recipes {
+		padding-top: 58px;
+	}
+}
+
+@media (max-width: 993px) {
+	body {
+		margin-bottom: 125px;
+	}
 	.footer {
 		height: 125px;	
 	}
@@ -220,3 +219,4 @@ legend {
 }
 @import "bootswatch/flatly/bootswatch";
     
+
